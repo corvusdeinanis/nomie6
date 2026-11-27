@@ -11,8 +11,7 @@ import { Interact } from '../../store/interact'
 import { switchToLocal } from '../settings/settings-functions'
 
 // import DumbStorage from './engines/storage.dumb'
-
-import { LocalForageEngine } from './engines/localforage/engine.localforage'
+import { FileEngine } from './engines/file/engine.file'
 import { PouchDBEngine } from './engines/pouchdb/engine.pouchdb'
 import { SideStore } from './side-storage'
 // import { S3Engine } from "./engines/engine.s3";
@@ -44,7 +43,7 @@ export const StorageEngines: Array<StorageEngineType> = [
     description: 'Data is stored on this device only.',
     price: 'FREE',
     multipleDevices: false,
-    engine: LocalForageEngine,
+    engine: FileEngine,
   },
   {
     id: 'pouchdb',
